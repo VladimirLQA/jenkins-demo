@@ -11,5 +11,13 @@ pipeline {
                 '''
             }
         }
+        stage('Run helloWorld.js') {
+            steps {
+                sh '''
+                    echo "Running helloWorld.js..."
+                    node helloWorld.js
+                '''
+            }
+        }
     }
 }
