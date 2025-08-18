@@ -6,6 +6,8 @@ pipeline {
             steps {
                 sh '''
                     echo "Initializing..."
+                    node -v
+                    npm -v
                 '''
             }
         }
