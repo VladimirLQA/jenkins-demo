@@ -35,7 +35,6 @@ pipeline {
     }
 }
 
-
 def getDayOfWeek() {
     return new Date().format('EEEE')
 }
