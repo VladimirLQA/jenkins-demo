@@ -29,7 +29,7 @@ pipeline {
 
         stage('Run shared library helloWorld var') {
             steps {
-                helloWorld()
+                helloWorld(config)
             }
         }
     }
