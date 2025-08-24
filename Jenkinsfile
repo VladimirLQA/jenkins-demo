@@ -1,5 +1,10 @@
 @Library('Demo') _
 
+def config = [
+    name: 'Viva',
+    dayOfWeek: getDayOfWeek()
+]
+
 pipeline {
     agent any
 
@@ -28,4 +33,9 @@ pipeline {
             }
         }
     }
+}
+
+
+def getDayOfWeek() {
+    return new Date().format('EEEE')
 }
