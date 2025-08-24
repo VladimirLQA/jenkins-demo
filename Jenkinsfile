@@ -32,6 +32,7 @@ pipeline {
                 sh '''
                     echo "List files in current directory:"
                     ls -al
+                    cat ./hello-world.sh
                 '''
                 helloWorldExternal(config)
             }
