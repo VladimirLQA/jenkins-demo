@@ -1,3 +1,5 @@
+@Library('github-api-global-lib') _
+
 pipeline {
     agent any
 
@@ -11,12 +13,18 @@ pipeline {
                 '''
             }
         }
-        stage('Run helloWorld.js') {
+        // stage('Run helloWorld.js') {
+        //     steps {
+        //         sh '''
+        //             echo "Running helloWorld.js..."
+        //             node helloWorld.js
+        //         '''
+        //     }
+        // }
+
+        stage('Run shared library helloWorld var') {
             steps {
-                sh '''
-                    echo "Running helloWorld.js..."
-                    node helloWorld.js
-                '''
+                helloWorld()
             }
         }
     }
