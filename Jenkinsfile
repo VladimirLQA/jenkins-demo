@@ -1,4 +1,4 @@
-@Library('github-api-global-lib') _
+@Library('shared-library') _
 
 pipeline {
     agent any
