@@ -29,6 +29,10 @@ pipeline {
 
         stage('Run shared library helloWorld var') {
             steps {
+                sh '''
+                    echo "List files in current directory:"
+                    ls -al
+                '''
                 helloWorldExternal(config)
             }
         }
